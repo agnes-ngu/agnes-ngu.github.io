@@ -1,37 +1,84 @@
+html{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Arial Black', sans-serif;
   background: #f5f5f0;
   color: #111;
+ 
 }
 
-.slide {
-  min-height: 100vh;
-  padding: 80px;
+section {
+  max-height: 90vh;
+  min-height: 90vh;
+  padding: 3vh 0vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  /*justify-content: center;*/
+}
+
+h1, h2, h3, ol {
+  padding: 0vh 0vw;
+  margin: 0vh 0vw;
+  margin-left: 7vw;
+  position: relative;
 }
 
 h1 {
-  font-size: 8rem;
-  color: #ff4c3b;
+  font-size: 10rem;
+  color: #f037a5;
+  margin-top: 7vh;
+  margin-bottom: 10vh;
 }
 
 h2 {
   font-size: 4rem;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
 }
 
 .big-number {
-  font-size: 6rem;
-  color: #ff4c3b;
+  font-size: 7rem;
+  color: #f037a5;
 }
 
 ol {
   font-size: 2rem;
+  margin-left: 7vw;
 }
 
 .subtitle {
+  color: #cdf564;
   font-size: 2rem;
-  opacity: 0.7;
+  opacity: 0.8;
+}
+
+#slide1 {
+  background: indigo;
+}
+
+#slide2 {
+  background: #cdf564;
+}
+
+#slide3 {
+  background: #f037a5;
+}
+
+#slide4 {
+  background: #4b917d;
+}
+
+#artists {
+  color: #9cf0e1;
+}
+
+#songs {
+  color: #cdf564;
 }
