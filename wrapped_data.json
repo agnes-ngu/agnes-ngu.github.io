@@ -1,0 +1,49 @@
+{
+  "time": {
+    "minutes": 53569,
+    "hours": 892.81,
+    "days": 37.2,
+    "years": 0.1019
+  },
+  "topArtists": [
+    {
+      "artist": "SZA",
+      "msPlayed": 262285819
+    },
+    {
+      "artist": "Kendrick Lamar",
+      "msPlayed": 142053461
+    },
+    {
+      "artist": "Kali Uchis",
+      "msPlayed": 92009157
+    }
+  ],
+  "topSongs": [
+    {
+      "track": "30 For 30 (with Kendrick Lamar)",
+      "artist": "SZA",
+      "msPlayed": 9312988
+    },
+    {
+      "track": "Crybaby",
+      "artist": "SZA",
+      "msPlayed": 7940034
+    },
+    {
+      "track": "Diamond Boy (DTM)",
+      "artist": "SZA",
+      "msPlayed": 7774065
+    },
+    {
+      "track": "Kitchen",
+      "artist": "SZA",
+      "msPlayed": 6745340
+    },
+    {
+      "track": "BMF",
+      "artist": "SZA",
+      "msPlayed": 6638357
+    }
+  ]
+}

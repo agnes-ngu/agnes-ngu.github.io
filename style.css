@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: 'Arial Black', sans-serif;
+  background: #f5f5f0;
+  color: #111;
+}
+
+.slide {
+  min-height: 100vh;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 8rem;
+  color: #ff4c3b;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+.big-number {
+  font-size: 6rem;
+  color: #ff4c3b;
+}
+
+ol {
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  opacity: 0.7;
+}
