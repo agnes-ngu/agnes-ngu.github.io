@@ -22,7 +22,7 @@ def total_listening_time(files):
         "years": round(minutes / 60 / 24 / 365, 4)
     }
 
-def top_artists(files, top_n=3):
+def top_artists(files, top_n=5):
     artist_time = defaultdict(int)
 
     for file in files:
