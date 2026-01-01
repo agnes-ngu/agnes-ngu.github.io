@@ -31,27 +31,51 @@
     {
       "track": "30 For 30 (with Kendrick Lamar)",
       "artist": "SZA",
-      "msPlayed": 9312988
+      "min": 155,
+      "hr": 3
     },
     {
       "track": "Crybaby",
       "artist": "SZA",
-      "msPlayed": 7940034
+      "min": 132,
+      "hr": 2
     },
     {
       "track": "Diamond Boy (DTM)",
       "artist": "SZA",
-      "msPlayed": 7774065
+      "min": 130,
+      "hr": 2
     },
     {
       "track": "Kitchen",
       "artist": "SZA",
-      "msPlayed": 6745340
+      "min": 112,
+      "hr": 2
     },
     {
       "track": "BMF",
       "artist": "SZA",
-      "msPlayed": 6638357
+      "min": 111,
+      "hr": 2
     }
-  ]
+  ],
+  "totalArtists": 2034,
+  "topArtistStats": {
+    "artist": "SZA",
+    "msPlayed": 262285819,
+    "minutes": 4371,
+    "hours": 73,
+    "peakDate": "2025-06-25",
+    "peakMin": 200,
+    "peakHour": 3
+  },
+  "topSongStats": {
+    "track": "30 For 30 (with Kendrick Lamar)",
+    "artist": "SZA",
+    "peakDay": "2025-01-08",
+    "peakMin": 15,
+    "peakHr": 0.25,
+    "totalMin": 155,
+    "totalHours": 2.59
+  }
 }

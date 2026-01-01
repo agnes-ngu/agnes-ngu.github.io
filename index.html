@@ -3,28 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <title>Your Spotify Wrapped</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="scratch.css" />
 </head>
 <body>
+  <div id="morphNav" class="nav-closed">
+   <button id="navToggle">☰</button>
+
+    <nav class="nav-content">
+      <a href="#">Overview</a>
+      <a href="#">Top Artists</a>
+      <a href="#">Top Songs</a>
+      <a href="#">Stats</a>
+    </nav>
+  </div>
+
   <section class="slide" id="slide1">
     <h1>2025</h1>
-    <h3 class="subtitle">Your Spotify Wrapped</h3>
+    <h3 id="subtitle">Your Spotify (Un)wrapped</h3>
   </section>
 
   <section class="slide" id="slide2">
-    <h2>Minutes Listened</h2>
-    <h3 id="minutes" class="big-number"></h3>
+    <h2 class="labels">Time Listened</h2>
+    <h3 id="totMinutes" class="total-time"></h3>
+    <h4 id="caption" class="total-time">That's</h4>
+    <h4 id="hours" class="total-time"></h4>
+    <h4 id="days" class="total-time"></h4>
+    <h4 id="years" class="total-time"></h4>
   </section>
 
   <section class="slide" id="slide3">
-    <h2>Top Artists</h2>
+    <h2 class="labels">Top Artists</h2>
     <ol id="artists"></ol>
   </section>
 
   <section class="slide" id="slide4">
-    <h2>Top Songs</h2>
+    <h2 class="labels">Top Songs</h2>
     <ol id="songs"></ol>
+    <!--<div id="topSongStats">
+      <h2 class="topSong">Your Top Song:</h2>
+      <h2 class="topSong"></h2>
+      <h4 id="songPeakDate" class="topSong"></h4>
+      <h4 id="songPeakMin" class="topSong"></h4>
+      <h4 id="songPeakHr" class="topSong"></h4>
+    </div>-->
   </section>
+
+  <section class="slide" id="slide5">
+    <h2 class="labels">Total Artists</h2>
+    <h3 id="artistsTotal"></h3>
+  </section>
+
+  <section class="slide" id="slide6">
+    <h2 id="artistLabel" class="labels">Your Top Artist</h2>
+    <h3 id="artistTop" class="time-artist"></h3>
+    <h4 id="artistMin" class="time-artist"></h4>
+    <h4 id="artistHour" class="time-artist"></h4>
+    <h4 id="artistPeakDay" class="time-artist"></h4>
+    <h4 id="artistPeakMinutes" class="time-artist"></h4>
+    <h4 id="artistPeakHours" class="time-artist"></h4>
+  </section>
+
+  <section class="slide" id="slide7">
+    <h2 class="labels">Your Top Song</h2>
+    <h3 id="songTop" class="time-song"></h3>
+    <h4 id="songArtist" class="time-song"></h4>
+    <h4 id="songMin" class="time-song"></h4>
+    <h4 id="songHr" class="time-song"></h4>
+    <h4 id="songPeakDay" class="time-song"></h4>
+    <h4 id="songPeakMin" class="time-song"></h4>
+    <h4 id="songPeakHr" class="time-song"></h4>
+  </section>
+
+  <a href="#" id="scrollBtn">&#8593</a>
 
   <script src="script.js"></script>
 </body>
