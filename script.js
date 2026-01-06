@@ -9,6 +9,21 @@ fetch("wrapped_data.json")
       nav.classList.toggle("open");
     });
 
+
+    // Scroll to next page button
+    const nextPgBtn = document.querySelectorAll('.nextBtn');
+    const targetSection = document.getElementById('TotalListening');
+
+    nextPgBtn.forEach(button => {
+      button.addEventListener('click', (e) => {
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+
+
     // Time listened
     document.getElementById("totMinutes").textContent = 
       `${data.time.minutes.toLocaleString()} minutes`;

@@ -17,8 +17,8 @@ def total_listening_time(files):
     minutes = total_ms / 60000
     return {
         "minutes": round(minutes),
-        "hours": round(minutes / 60, 2),
-        "days": round(minutes / 60 / 24, 2),
+        "hours": round(minutes / 60),
+        "days": round(minutes / 60 / 24),
         "years": round(minutes / 60 / 24 / 365, 4)
     }
 
