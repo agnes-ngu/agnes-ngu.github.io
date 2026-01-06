@@ -47,28 +47,26 @@ fetch("wrapped_data.json")
       `${data.topArtistStats.minutes} minutes listened`;
     document.getElementById("artistHour").textContent =
       `That's ${data.topArtistStats.hours} hours`;
+    document.getElementById("artistStatTop").textContent =
+      data.topArtistStats.artist;
     document.getElementById("artistPeakDay").textContent =
       `Date most streamed: ${data.topArtistStats.peakDate}`;
-    document.getElementById("artistPeakMinutes").textContent =
-      `Time streamed on this date: ${data.topArtistStats.peakMin} minutes`;
-    document.getElementById("artistPeakHours").textContent =
-      `That's ${data.topArtistStats.peakHour} hours`;
+    document.getElementById("artistPeakTime").textContent =
+      `Time streamed on this date: ${data.topArtistStats.peakMin} minutes (${data.topArtistStats.peakHour} hours)`;
 
     // Top Song stats
     document.getElementById("songTop").textContent =
-      data.topSongStats.track;
-    document.getElementById("songArtist").textContent =
-      `By ${data.topSongStats.artist}`;
+      `${data.topSongStats.track} - ${data.topSongStats.artist}`;
     document.getElementById("songMin").textContent =
       `${data.topSongStats.totalMin} minutes listened`;
     document.getElementById("songHr").textContent =
       `That's ${data.topSongStats.totalHours} hours`;
+    document.getElementById("SongStatName").textContent =
+      `${data.topSongStats.track} - ${data.topSongStats.artist}`;
     document.getElementById("songPeakDay").textContent =
       `Day most streamed: ${data.topSongStats.peakDay}`;
-    document.getElementById("songPeakMin").textContent =
+    document.getElementById("songPeakTime").textContent =
       `Time streamed on this date: ${data.topSongStats.peakMin} minutes`;
-    document.getElementById("songPeakHr").textContent =
-      `That's ${data.topSongStats.peakHr} hours`;
       
 
     // Scroll to top button

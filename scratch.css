@@ -36,6 +36,7 @@ a {
         height 0.5s ease,
         border-radius 0.5s ease;
     overflow: hidden;
+    z-index: 1000;
 }
 
 #morphNav:hover {
@@ -89,104 +90,47 @@ a {
     /*background: gray;*/
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Rotate to 360 degrees (one full turn) */
+  }
+}
+
 
 
 section {
-    max-height: 95vh;
-    min-height: 95vh;
+    max-height: 97vh;
+    min-height: 97vh;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    text-align: center;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
 }
 
-#slide1 {
-    background: black;
-    position: relative;
-    color: white;
-}
-
-#text1 {
-    position: absolute;
-    z-index: 2;
-}
-
-#slide1Img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /*object-fit: cover;*/
-    z-index: 1;
-}
-
-#slide2 {
-    background: #fef200;
-    position: relative;
-    color: black;
-}
-
-#text2 {
-    position: absolute;
-    z-index: 2;
+/*.slide-text, #top-artist-label {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; /*why need to reassign flex column if alr in section?*/
-}
-
-#slide2img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-}
-
-#slide3 {
-    background: #e81b00;
-    position: relative;
-}
-
-#text3 {
-    position: absolute;
-    z-index: 2;
-}
-
-#slide3img {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    height: 100%;
-}
-
-#slide4 {
-    background: #00adef;
-}
-
-#slide5 {
-    background: #f037a5;
-}
-
-#slide6 {
-    background: indigo;
-}
+/*}*/
 
 h1 {
     font-size: 10rem;
 }
 
-h2 {
-    font-size: 4rem;
+h2.labels {
+    font-size: 5rem;
 }
 
 h3 {
-    font-size: 7rem;
+    font-size: 8rem;
 }
 
 h4 {
@@ -204,4 +148,223 @@ ol {
 
 .title {
     margin: auto;
+}
+
+
+
+#TitlePage {
+    background: black;
+    position: relative;
+    color: white;
+}
+
+#TitleText {
+    position: absolute;
+    z-index: 2;
+}
+
+#vinylImg {
+    width: 350px;
+    /* 2. Apply the animation to the image class */
+    /* Set the animation properties: */
+    animation-name: spin;        /* Name of the keyframes animation */
+    animation-duration: 4s;      /* Duration of one rotation */
+    animation-timing-function: linear; /* Constant speed */
+    animation-iteration-count: infinite; /* Loop the animation indefinitely */
+}
+
+#TitleImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*object-fit: cover;*/
+    z-index: 1;
+}
+
+
+
+#TotalListening {
+    background: #fef200;
+    position: relative;
+    color: black;
+}
+
+#TotalTimeText {
+    position: absolute;
+    z-index: 2;
+}
+
+#TotalTimeImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+
+
+#TopArtistList {
+    background: #e81b00;
+    /*position: relative;*/
+}
+
+
+#TopSongList {
+    background: #00adef;
+}
+
+
+#ArtistCount {
+    background: #f037a5;
+}
+
+
+
+#TopArtist {
+    background: #2C2C2A;
+    color: #CADAC5;
+}
+
+#TopArtistImg {
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+#TopArtistImg #ArtistImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#artistTop {
+    font-size: 4rem;
+}
+
+
+
+#TopArtistStats {
+    background: #7D9750;
+    color: #2C2C2A;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: minmax(auto, 20vh) auto;
+}
+
+#ArtistStatHead, #ArtistStatMain, #ArtistStatText {
+    height: 100%;
+    width: 100%;
+}
+
+#ArtistStatHead {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    max-height: 20vh;
+}
+
+#ArtistStatMain {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
+    width: 400px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+#ArtistStatImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#artistStatTop {
+    font-size: 4rem;
+}
+
+#ArtistStatText {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+#TopSong {
+    background: #F7AF3F;
+    color: #233E30;
+}
+
+#TopSongImg {
+    width: 106px;
+    height: 106px;
+}
+
+#songTop {
+    font-size: 4rem;
+    /*text-align: center;*/
+}
+
+
+
+#TopSongStats {
+    background: #022E36;
+    color: #CADAC5;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: minmax(auto, 20vh) auto;
+}
+
+#SongStatHead, #SongStatMain, #SongStatExtra { /*look into box-sizing to prevent added width/height*/
+    height: 100%;
+    width: 100%;
+}
+
+#SongStatHead {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    max-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#SongStatMain {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#SongStatName {
+    font-size: 3rem;
+}
+
+#SongStatImg { /*look into img size adjust to screen size*/
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+}
+
+#SongStatExtra {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }

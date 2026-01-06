@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your Spotify Wrapped</title>
+  <title>Your Spotify Unwrapped</title>
   <link rel="stylesheet" href="scratch.css" />
 </head>
 <body>
@@ -17,70 +17,101 @@
     </nav>
   </div>
 
-  <section class="slide" id="slide1">
-    <div id="text1">
-      <h1 id="title" class="text1">2025</h1>
-      <h3 id="subtitle" class="text1">Your Spotify (Un)wrapped</h3>
+  <section class="slide" id="TitlePage">
+    <div class="slide-text" id="TitleText">
+      <h1 id="title">2025</h1>
+      <h3 id="subtitle">Your Spotify (Un)wrapped</h3>
+      <img id="vinylImg" src="vinyl transparent.png">
     </div>
-    <img id="slide1Img" src="wavy-lines.png">
+    <!--<img id="TitleImg" src="wavy-lines.png">-->
   </section>
 
-  <section class="slide" id="slide2">
-    <div id="text2">
+  <section class="slide" id="TotalListening">
+    <div class="slide-text" id="TotalTimeText">
       <h2 class="labels">Total Listening Time</h2>
-      <h3 id="totMinutes" class="total-time"></h3>
-      <h4 id="caption" class="total-time">That's</h4>
-      <h4 id="hours" class="total-time"></h4>
-      <h4 id="days" class="total-time"></h4>
-      <h4 id="years" class="total-time"></h4>
+      <h3 id="totMinutes"></h3>
+      <h4 id="caption">That's</h4>
+      <h4 id="hours"></h4>
+      <h4 id="days"></h4>
+      <h4 id="years"></h4>
     </div>
-    <img id="slide2img" src="dots transparent.png">
+    <img id="TotalTimeImg" src="dots transparent.png">
   </section>
 
-  <section class="slide" id="slide3">
-    <div id="text3">
+  <section class="slide" id="TopArtistList">
+    <div class="slide-text" id="ArtistListText">
       <h2 class="labels">Top Artists</h2>
       <ol id="artists"></ol>
     </div>
-    <img id="slide3img" src="liquid.png">
   </section>
 
-  <section class="slide" id="slide4">
-    <h2 class="labels">Top Songs</h2>
-    <ol id="songs"></ol>
-    <!--<div id="topSongStats">
-      <h2 class="topSong">Your Top Song:</h2>
-      <h2 class="topSong"></h2>
-      <h4 id="songPeakDate" class="topSong"></h4>
-      <h4 id="songPeakMin" class="topSong"></h4>
-      <h4 id="songPeakHr" class="topSong"></h4>
-    </div>-->
+  <section class="slide" id="TopSongList">
+    <div class="slide-text" id="SongListText">
+      <h2 class="labels">Top Songs</h2>
+      <ol id="songs"></ol>
+    </div>
+    <!--section for top song stats on same section?-->
   </section>
 
-  <section class="slide" id="slide5">
-    <h2 class="labels">Total Artists</h2>
-    <h3 id="artistsTotal"></h3>
+  <section class="slide" id="ArtistCount">
+    <div class="slide-text" id="TotArtistText">
+      <h2 class="labels">Total Artists</h2>
+      <h3 id="artistsTotal"></h3>
+    </div>
   </section>
 
-  <section class="slide" id="slide6">
-    <h2 id="artistLabel" class="labels">Your Top Artist</h2>
-    <h3 id="artistTop" class="time-artist"></h3>
-    <h4 id="artistMin" class="time-artist"></h4>
-    <h4 id="artistHour" class="time-artist"></h4>
-    <h4 id="artistPeakDay" class="time-artist"></h4>
-    <h4 id="artistPeakMinutes" class="time-artist"></h4>
-    <h4 id="artistPeakHours" class="time-artist"></h4>
+  <section class="slide" id="TopArtist">
+    <h2 class="labels" id="TopArtistText">Your Top Artist</h2>
+    <h3 id="artistTop"></h3>
+
+    <div id="TopArtistImg">
+      <img id="ArtistImg" src="sza-plant.avif">
+    </div>
+
+    <h4 id="artistMin"></h4>
+    <h4 id="artistHour"></h4>
   </section>
 
-  <section class="slide" id="slide7">
+  <section class="slide" id="TopArtistStats">
+    <div id="ArtistStatHead">
+      <h2 class="labels">Top Artist Stats</h2>
+    </div>
+
+    <div class="slide-text" id="ArtistStatMain">
+      <div class="img-container">
+        <img id="ArtistStatImg" src="sza-plant.avif">
+      </div>
+    </div>
+
+    <div class="slide-text" id="ArtistStatText">
+      <h3 id="artistStatTop"></h3>
+      <h4 id="artistPeakDay"></h4>
+      <h4 id="artistPeakTime"></h4>
+    </div>
+  </section>
+
+  <section class="slide" id="TopSong">
     <h2 class="labels">Your Top Song</h2>
-    <h3 id="songTop" class="time-song"></h3>
-    <h4 id="songArtist" class="time-song"></h4>
-    <h4 id="songMin" class="time-song"></h4>
-    <h4 id="songHr" class="time-song"></h4>
-    <h4 id="songPeakDay" class="time-song"></h4>
-    <h4 id="songPeakMin" class="time-song"></h4>
-    <h4 id="songPeakHr" class="time-song"></h4>
+    <h3 id="songTop"></h3>
+    <img id="TopSongImg" src="sza bug.png">
+    <h4 id="songMin"></h4>
+    <h4 id="songHr"></h4>
+  </section>
+
+  <section class="slide" id="TopSongStats">
+    <div class="slide-text" id="SongStatHead">
+      <h2 class="labels">Top Song Stats</h2>
+    </div>
+
+    <div class="slide-text" id="SongStatMain">
+      <img id="SongStatImg" src="sza bug.png">
+    </div>
+
+    <div class="slide-text" id="SongStatExtra">
+      <h3 id="SongStatName"></h3>
+      <h4 id="songPeakDay"></h4>
+      <h4 id="songPeakTime"></h4>
+    </div>
   </section>
 
   <a href="#" id="scrollBtn">&#8593</a>
