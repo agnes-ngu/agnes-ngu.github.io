@@ -102,8 +102,8 @@ a {
 
 
 section {
-    max-height: 97vh;
-    min-height: 97vh;
+    max-height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: center;
     scroll-snap-stop: always;
     text-align: center;
@@ -118,7 +118,7 @@ h1 {
     font-size: 10rem;
 }
 
-h2.labels {
+h2 {
     font-size: 5rem;
 }
 
@@ -139,142 +139,357 @@ ol {
     font-size: 2rem;
 }
 
-.title {
-    margin: auto;
-}
-
 
 
 #TitlePage {
     background: black;
-    position: relative;
     color: white;
+    position: relative;
+    overflow: hidden;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-}
-
-#TitlePage > * {
-    height: 100%;
-    width: 100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 #TitleText {
-    grid-row: 1;
-    position: absolute;
-    z-index: 2;
+    height: 100%;
+    width: auto;
+    position: relative;
+    top: 0;
+    right: 0;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #buttonCombo {
-    grid-row: 2;
+    height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
+    grid-column: 1;
 }
 
 #vinylBtn {
-    height: 250px;
-    width: 250px;
-    background: white;
-    color: black;
-    border: none;
-    border-radius: 50%;
-    z-index: 2;
-    cursor: pointer;
-
     position: absolute;
-    top: 50%;
+    height: 125%;
+    border-radius: 50%;
     left: 50%;
+    top: 50%;
+    background-color: white;
     transform: translate(-50%, -50%);
-    transition: background-color .7s, width .7s ease, height .7s ease;
+    transition: transform .3s ease;
+    cursor: pointer;
 }
 
 #vinylImg {
-    width: 250px;
-    height: 250px;
+    height: 100%;
+    width: auto;
     border-radius: 50%;
-    transition: background-color .7s, width .7s ease, height .7s ease;
-
+    
     animation-name: spin;
     animation-duration: 7s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
-#overlayBtn {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
+#TextBtn {
     background-color: white;
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
     border: none;
-    cursor: pointer;
-    z-index: 3;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    font-weight: 800;
-
+    font-family: Arial Black, Helvetica, sans-serif;
+    font-size: 2rem;
     position: absolute;
+    z-index: 5;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: background-color .7s, width .7s ease, height .7s ease;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    transition: .5s ease;
 }
 
-#vinylBtn:hover, #vinylImg:hover {
-    background: gold;
-    height: 270px;
-    width: 270px;
-    /*animation-duration: 3s;*/
-}
-
-#vinylBtn:hover + #overlayBtn, #overlayBtn:hover {
+#vinylBtn:hover {
+    transform: translate(-45%, -50%);
     background-color: gold;
-    width: 85px;
-    height: 85px;
 }
 
-/*#vinylImg:has(+ #overlayBtn:hover),*/ #vinylBtn:has(+ #overlayBtn:hover) {
+#vinylBtn:hover #TextBtn {
     background-color: gold;
-    height: 270px;
-    width: 270px;
-    animation-duration: 3s;
+    padding: 40px;
+}
+
+#TitleText:has(+ #vinylBtn:hover) {
+    color: gold;
 }
 
 
 
 #TotalListening {
-    background: gold;
+    background: rgb(120, 102, 1);
     color: black;
     position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
 }
 
 #TotalTimeText {
+    height: 70%;
+    width: 75%;
     position: absolute;
     z-index: 2;
+    background-color: black;
+    border-radius: 20px;
+    opacity: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    padding-left: 30px;
+    white-space: nowrap;
+}
+
+.TotalText {
+    color: white;
+    position: relative;
+    top: 0px;
+    margin-bottom: 10px;
+}
+
+#timeBtn {
+    font-size: 2rem;
+    font-family: Arial Black, Helvetica, sans-serif;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#caption{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#timeSwitch {
+    display: inline-block;
+    width: 16vw;
+}
+
+#timeNextBtn {
+    background-color: transparent;
+    font-family: Arial Black, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    border: none;
+    color: white;
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
+    cursor: pointer;
 }
 
 #TotalTimeImg {
-    height: 100%;
-    width: 100%;
+    height: 125%;
+    width: auto;
     position: absolute;
     z-index: 1;
-    top: 0;
-    left: 0;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    opacity: 60%;
+}
+
+#TimeBg {
+    position: absolute;
+    width: 102%;
+    height: auto;
+    opacity: 30%;
 }
 
 
 
 #TopArtistList {
-    background: #e81b00;
-    /*position: relative;*/
+    background: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
 }
+
+#artistListText {
+    grid-column: 1;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.artistText {
+    background-image: linear-gradient(to bottom, rgb(65, 65, 65), rgb(203, 203, 203), rgb(65, 65, 65));
+    background-clip: text;
+    color: transparent;
+    margin: 10px;
+}
+
+#artists {
+    text-align: left;
+}
+
+#artistListImgs {
+    grid-column: 2;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    position: relative;
+}
+
+.artistImgs {
+    bottom: 50px;
+    width: 120px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+}
+
+#szaImg {
+    top: 50px;
+    width: 300px;
+    position: absolute;
+    justify-content: center;
+    align-self: flex-start;
+}
+
 
 
 #TopSongList {
-    background: #00adef;
+    background: #9C7700;
+    position: relative;
+    overflow: hidden;
+}
+
+#SongListHead {
+    position: absolute;
+    height: auto;
+    width: 22vw;
+    top: 7%;
+    left: 2%;
+    transform: rotate(-15deg);
+    z-index: 3;
+}
+
+#SongListText {
+    height: auto;
+    width: 40%; 
+    position: absolute;
+    z-index: 4;
+    top: 10%;
+    right: 5%;
+    transform: rotate(-15deg);
+}
+
+#songs {
+    text-align: left;
+}
+
+#gramoImg {
+    position: absolute;
+    width: 800px;
+    height: auto;
+    top: -7%;
+    left: -7%;
+    transform: rotate(10deg);
+    z-index: 2;
+}
+
+#nextRadioBtn {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#radioImg {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 0;
+    left: 0;
+}
+
+#radioTxt {
+    position: absolute;
+    font-family: Arial Black, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 
+
 #ArtistCount {
-    background: #f037a5;
+    background: rgb(255, 248, 224);
+    color: #9C7700;
+    overflow: hidden;
+    position: relative;
+}
+
+#TotArtistText {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+#artistsTotal {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#totArtistLabel {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#boomboxImg {
+    position: absolute;
+    z-index: 2;
+    height: auto;
+    width: 110%;
+    top: 40%;
+    opacity: 90%;
+}
+
+#silkbg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: 60%;
+    filter: blur(3px);
 }
 
 

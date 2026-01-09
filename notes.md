@@ -2,7 +2,9 @@ to do:
 - collapsing side nav or shrink on scroll
 - title page: slow spinning vinyl with go button. when hover, spin faster. on click, expand to fill screen to transition to next pg. keep vinyl enlarged on side of page (sticking out like with irl sleeve) for decor/bkg? OR maybe have vinyl break upon click. OR since named unwrapped, symbolize unwrapping somehow
     - ACTUALLY: do top half vinyl sticking up from bottom of page saying go. on hover, does spin and color change blah blah. on click, drags up next screen, where bottom half of clock (same giant size) sticks out of top edge.
+    - OR vinyl on left side spinning. on clikc, ROLLS to right side as page scrolls. on next page, half clock peeks out of right side.
     - use hourglass symbol otherwise?
+- top 5 artists: rotating carousel- bouncing floating img & name, click l/r arrow to spin to next artist
 - change title page bg color
 - change nav bar so it sticks and can see background without hover. when do hover, expand into wider bar showing links
 - images, graphics, color

@@ -18,53 +18,70 @@
   </div>
 
   <section class="slide" id="TitlePage">
-    <div class="slide-text" id="TitleText">
+    <div id="TitleText">
       <h1 id="title">2025</h1>
       <h3 id="subtitle">Your Spotify (Un)wrapped</h3>
     </div>
 
     <div id="buttonCombo">
       <button type="button" class="nextBtn" id="vinylBtn">
-        <img id="vinylImg" src="vinyl nobg.png">
+        <img id="vinylImg" src="vinyl transparent.png">
+        <span id="TextBtn">Go &#8594</span>
       </button>
-      <button type="button" class="nextBtn" id="overlayBtn">
-        Go &#8594
-      </button>       
     </div>
   </section>
 
   <section class="slide" id="TotalListening">
     <div class="slide-text" id="TotalTimeText">
-      <h2 class="labels">Total Listening Time</h2>
-      <h3 id="totMinutes"></h3>
-      <h4 id="caption">That's</h4>
-      <h4 id="hours"></h4>
-      <h4 id="days"></h4>
-      <h4 id="years"></h4>
+      <h2 class="TotalText" id="timeHeader">Total Listening Time</h2>
+      <h3 class="TotalText" id="totMinutes"></h3>
+      <h4 class="TotalText" id="caption">That's</h4>
+      <h4 class="TotalText" id="timeSwitch"></h4>
+      <!--<h4 class="TotalText" id="days"></h4>
+      <h4 class="TotalText" id="years"></h4>-->
+      <button class="TotalText" id="timeBtn">&#8594 listened</button>
+      <button id="timeNextBtn">Next &#8594</button>
     </div>
-    <img id="TotalTimeImg" src="dots transparent.png">
+    <img id="TotalTimeImg" src="clock traced black.png">
+    <img id="TimeBg" src="frost gold.jpg">
   </section>
 
   <section class="slide" id="TopArtistList">
-    <div class="slide-text" id="ArtistListText">
-      <h2 class="labels">Top Artists</h2>
-      <ol id="artists"></ol>
+    <div class="slide-text" id="artistListText">
+      <h2 class="artistText">Top Artists</h2>
+      <ol class="artistText" id="artists"></ol>
+    </div>
+    <div id="artistListImgs">
+      <img class="artistImgs" id="szaImg" src="sza.jpg">
+      <img class="artistImgs" id="kenImg" src="kendrick.webp">
+      <img class="artistImgs" id="kaliImg" src="kuchi.jfif">
+      <img class="artistImgs" id="rachImg" src="rach.jpg">
+      <img class="artistImgs" id="mariasImg" src="marias.jfif">
     </div>
   </section>
 
   <section class="slide" id="TopSongList">
-    <div class="slide-text" id="SongListText">
+    <div class="slide-text" id="SongListHead">
       <h2 class="labels">Top Songs</h2>
+    </div>
+    <div class="slide-text" id="SongListText">
       <ol id="songs"></ol>
     </div>
+    <button id="nextRadioBtn">
+      <img id="radioImg" src="radio.png">
+      <span id="radioTxt">Next &#8594</span>
+    </button>
+    <img id="gramoImg" src="gramophone cropped.png">
     <!--section for top song stats on same section?-->
   </section>
 
   <section class="slide" id="ArtistCount">
     <div class="slide-text" id="TotArtistText">
-      <h2 class="labels">Total Artists</h2>
       <h3 id="artistsTotal"></h3>
+      <h2 class="labels" id="totArtistLabel">Total Artists</h2>
     </div>
+    <img id="boomboxImg" src="radio.png">
+    <img id="silkbg" src="silk.jpg">
   </section>
 
   <section class="slide" id="TopArtist">

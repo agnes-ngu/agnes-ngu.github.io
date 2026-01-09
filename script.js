@@ -27,12 +27,42 @@ fetch("wrapped_data.json")
     // Time listened
     document.getElementById("totMinutes").textContent = 
       `${data.time.minutes.toLocaleString()} minutes`;
-    document.getElementById("hours").textContent = 
+    document.getElementById("timeSwitch").textContent = 
       `${data.time.hours.toLocaleString()} hours`;
-    document.getElementById("days").textContent = 
+    /*document.getElementById("days").textContent = 
       `${data.time.days.toLocaleString()} days`;
     document.getElementById("years").textContent = 
-      `${data.time.years.toLocaleString()} years`;
+      `${data.time.years.toLocaleString()} years`;*/
+
+    const texts = [
+      `${data.time.hours.toLocaleString()} hours`,
+      `${data.time.days.toLocaleString()} days`,
+      `${data.time.years.toLocaleString()} years`
+    ];
+
+    let currentIndex = 0;
+    const textDisplay = document.getElementById("timeSwitch");
+    const nextButton = document.getElementById("timeBtn");
+
+    nextButton.addEventListener("click", function() {
+      // Increment the index and use modulo to loop back to 0 when it reaches the end of the array
+      currentIndex = (currentIndex + 1) % texts.length;
+      
+      // Update the text content of the paragraph element
+      textDisplay.textContent = texts[currentIndex];
+    });
+
+    // Scroll to next page button
+    const timeNextBtn = document.getElementById('timeNextBtn');
+    const nextTargetSection = document.getElementById('TopArtistList');
+
+    timeNextBtn.addEventListener('click', (e) => {
+      nextTargetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+
   
 
     // Top artists
@@ -43,6 +73,8 @@ fetch("wrapped_data.json")
       artistList.appendChild(li);
     });
 
+
+
     // Top songs
     const songList = document.getElementById("songs");
     data.topSongs.forEach(s => {
@@ -51,9 +83,22 @@ fetch("wrapped_data.json")
       songList.appendChild(li);
     });
 
+    // Scroll to next page button
+    const songListNext = document.getElementById('nextRadioBtn');
+    const nextSection = document.getElementById('ArtistCount');
+
+    songListNext.addEventListener('click', (e) => {
+      nextSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+
+
+
     // Total artists
     document.getElementById("artistsTotal").textContent = 
-      `${data.totalArtists} artists`;
+      `${data.totalArtists.toLocaleString()}`;
       
     // Top artist stats
     document.getElementById("artistTop").textContent =
